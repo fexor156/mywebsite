@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Animate.css Library for Smooth Animations -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Website</title>
@@ -8,12 +11,21 @@
 </head>
 <body>
 
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    
+
     <!-- Navigation Bar -->
      <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        <div class="logo">MyWebsite</div>
+    <div class="menu-toggle" id="mobile-menu">
+        ☰
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     </header>
@@ -36,6 +48,30 @@
     
      <script src="script.js"></script>
 
+<button id="backToTop" class="back-to-top">⬆️</button>
+
 </body>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p id="formMessage"></p>
+</section>
+
 </html>
+<section id="about" class="animate__animated animate__fadeInUp">
+    <h2>About Us</h2>
+    <p>Welcome to our website!</p>
+</section>
+
+<section id="contact" class="animate__animated animate__fadeInLeft">
+    <h2>Contact Us</h2>
+    <p>Email us at example@example.com</p>
+</section>
+
+</section>
 
